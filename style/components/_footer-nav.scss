@@ -1,0 +1,137 @@
+/* ======================================
+ FOOTER NAVIGATION | BASE STYLES
+========================================= */
+.nav__nav{
+  font-size: .9rem;
+  line-height: 1.7;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  list-style-type: none;
+  width: 80%;
+  margin: 0 auto;
+  @media screen and (min-width: $footerbreakpoint){
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+    width: inherit;
+  }
+  padding: 0;
+  ul{
+    list-style-type: none;
+    padding: 0 1vw;
+    margin: 0;
+  }
+  a{
+    text-decoration: none;
+    &:hover{
+      cursor: pointer;
+      color: $teal;
+    }
+    &:focus{
+      color: inherit;
+    }
+  }
+}
+
+.nav__title{
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 1vh 0;
+  text-decoration: none;
+}
+
+.nav__top-level{
+  font-size: 1rem;
+  font-weight: 600;
+  margin: $oneone;
+  text-transform: uppercase;
+}
+
+
+
+/* ----------------------------------------
+ FOOOTER NAV | MOBILE
+ ---------------------------------------- */
+
+.footer__nav--mobile{
+  text-decoration: none;
+  padding-top: 2vh;
+  width: 100%;
+
+  .nav__nav{
+    border-left: 1px solid $halfteal;
+    border-right: 1px solid $halfteal;
+    border-bottom: 1px solid $halfteal;
+  }
+  .nav__top-option{
+    background-color: $white;
+    border-top: 1px solid $halfteal;
+    color: $halfteal;
+  }
+  .nav__top-level{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1vh 0;
+
+    &[aria-expanded='true']{
+      svg{
+        transform: rotate(90deg);
+        transition-duration: .5s;
+      }
+    }
+    &[aria-expanded='false']{
+      svg{
+        transition-duration: .5s;
+      }
+    }
+  }
+  .nav__bottom-option{
+    background-color: $ltteal;
+    border-top: 1px solid $teal;
+    color: $teal;
+    font-size: 1rem;
+    padding: 1vh 0 1vh 5vw;
+    li{
+      padding: 1vh 0;
+    }
+  }
+
+  @media screen and (min-width: $footerbreakpoint){
+    display: none;
+  }
+}
+
+
+
+
+/* ----------------------------------------
+ FOOOTER NAV | DESKTOP
+ ---------------------------------------- */
+
+.footer__nav{
+  color: $brown;
+  display: none;
+
+  @media screen and (min-width: $footerbreakpoint){
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 900px;
+    .nav__top-level{
+      padding: 1vh 0;
+    }
+    a{
+      text-decoration: none;
+      &:hover{
+        cursor: pointer;
+        color: $teal;
+      }
+      &:focus{
+        color: inherit;
+      }
+    }
+  }
+}

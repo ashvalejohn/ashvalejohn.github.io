@@ -1,0 +1,265 @@
+/* ======================================
+ FOR CLIENTS | BASE STYLES
+========================================= */
+.for-clients{
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+
+  //Desktop
+  @media screen and (min-width: $hamburgerbreakpoint){
+    @include center-flex;
+  }
+}
+
+
+/* ----------------------------------------
+ FOR CLIENTS | ELIGIBILITY
+ ---------------------------------------- */
+.for-clients__eligibility{
+  @include content-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+  .eligibility__title{
+    @include content-box__title;
+  }
+  .eligibility__subtitle{
+    @include content-box__subtitle;
+  }
+  .eligibility__checklist{
+    @include checklist;
+    max-width: 700px;
+    width: 70%;
+    li span{
+      font-family: $serif;
+      line-height: 1.5;
+    }
+  }
+    .checklist__internal-list{
+      list-style-type: none;
+    }
+    .checklist__item-title{
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-top: 2vh;
+    }
+    .checklist__read-more{
+      background-color: $teal;
+      border: 0px solid rgba(0,0,0,0);
+      border-radius: 100%;
+      box-shadow: $bottom-box-shadow;
+      color: $white;
+      padding: 0;
+      text-align: center;
+
+      height: 5vw;
+      width: 5vw;
+      min-height: 15px;
+      min-width: 15px;
+      line-height: 100%;
+      &:hover{
+        background-color: $orange;
+        cursor: pointer;
+      }
+      @media screen and (min-width: $hamburgerbreakpoint){
+        height: 2vw;
+        width: 2vw;
+      }
+    }
+
+
+/* ----------------------------------------
+ FOR CLIENTS | STEPS TO APPLY
+ ---------------------------------------- */
+.for-clients__steps-to-apply{
+  @include content-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 1vh;
+}
+  .steps-to-apply__title{
+    @include content-box__title;
+  }
+  .steps-to-apply__subtitle{
+    @include content-box__subtitle;
+  }
+  .steps-to-apply__step{
+    background-color: $white;
+    border: 1px solid $navy;
+    border-radius: $border-radius;
+    box-shadow: $bottom-box-shadow;
+    margin: $oneone;
+    padding: $oneone;
+    width: 90%;
+    @media screen and (min-width: $hamburgerbreakpoint){
+      max-width: 700px;
+      min-height: 40px;
+      width: 75%;
+    }
+
+  }
+    .step__button{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+
+      &:hover{
+        cursor: pointer;
+      }
+
+      &[aria-expanded='true']{
+        .step__title{
+          color: $brown;
+        }
+
+        svg{
+          fill: $brown;
+          transform: rotate(90deg);
+          transition-duration: .5s;
+        }
+      }
+      &[aria-expanded='false']{
+        svg{
+          transition-duration: .5s;
+        }
+      }
+    }
+    .step__title{
+      color: $teal;
+      display: inline-block;
+      font-size: 1rem;
+      margin: 0;
+      &:hover{
+        cursor: pointer;
+      }
+    }
+    .step__text{
+      border-top: 2px solid $orange;
+      margin-top: 1vh;
+      padding-top: 1vh;
+    }
+    .step__checklist{
+      @include checklist;
+    }
+
+
+/* ----------------------------------------
+ FOR CLIENTS | OUR PROPERTIES
+ ---------------------------------------- */
+.for-clients__our-properties{
+  @include content-box;
+}
+  .our-properties__title{
+    @include content-box__title;
+  }
+  .our-properties__subtitle{
+    @include content-box__subtitle;
+  }
+  .our-properties__img{
+    width: 45vw;
+    margin: 0 auto;
+  }
+  .our-properties__description{
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+
+
+    flex: 1;
+    height: 100%;
+    text-align: center;
+
+    @media screen and (min-width: $hamburgerbreakpoint){
+      align-items: flex-start;
+      margin-left: 5vw;
+      text-align: left;
+      justify-content: flex-start;
+    }
+    h1{
+      font-size: 1.5rem;
+      span{
+        color: $orange;
+      }
+    }
+    h2{
+      font-size: 1.1rem;
+      margin: 0;
+    }
+    p{
+      font-family: $serif;
+      margin: 1vh 0;
+    }
+  }
+  .our-properties__button{
+    @include cta-button;
+    font-size: .9rem;
+    width: 90%;
+    margin-bottom: 1vh;
+  }
+
+/* ----------------------------------------
+ FOR CLIENTS | FORMS & RESOURCES
+ ---------------------------------------- */
+.for-clients__forms-resources{
+  @include content-box;
+  ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+    @media screen and (min-width: $hamburgerbreakpoint){
+      align-items: flex-start;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+}
+  .forms-resources__title{
+    @include content-box__title;
+  }
+  .forms-resources__link{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    margin: 1vh 1vw;
+    width: 80%;
+    a{
+      text-decoration: none;
+    }
+    p{
+      margin-left: 1vw;
+    }
+    @media screen and (min-width: $hamburgerbreakpoint){
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: center;
+      width: auto;
+      p{
+        margin: 0;
+        max-width: 15vw;
+        width: 15vw;
+      }
+    }
+  }
+    .forms-resources__img{
+      border: 2px solid $teal;
+      border-radius: $border-radius;
+      width: 10vw;
+      &:hover{
+        border: 2px solid $orange;
+        cursor: pointer;
+      }
+    }

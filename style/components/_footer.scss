@@ -1,0 +1,130 @@
+/* ======================================
+ FOOTER | BASE STYLES
+========================================= */
+.footer{
+  background-color: $ltgray;
+  font-family: $sans-serif;
+  padding: 2vh 1vw 3vh 1vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: $footerbreakpoint){
+    align-items: center;
+  }
+}
+
+.footer-follow{
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  width: 100%;
+  @media screen and (min-width: $footerbreakpoint){
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.facebook-logo{
+  margin: 2vh 0;
+  width: 40vw;
+  @media screen and (min-width: $hamburgerbreakpoint){
+    margin: 0;
+    width: 15vw;
+  }
+}
+
+.footer__equal-housing{
+  height: 5vh;
+  width: 5vh;
+  margin: 2vh auto 1vh auto;
+}
+
+/* ----------------------------------------
+ FOOTER | NEWSLETTER SIGN UP
+ ---------------------------------------- */
+.footer__newsletter-signup{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  margin: 1vh auto;
+  @media screen and (min-width: $footerbreakpoint){
+    margin: 0;
+  }
+}
+
+  .newsletter-signup__title{
+    color: $teal;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: .5vh 0;
+  }
+
+  .newsletter-signup__subtitle{
+    color: $navy;
+    font-size: .8rem;
+    margin: .5vh 0;
+    font-weight: normal;
+  }
+
+  .newsletter-signup__form{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+
+    input[type='text']{
+      border: 1px solid $teal;
+      border-radius: $border-radius;
+      box-shadow: $bottom-box-shadow;
+      font-size: 1.25rem;
+      padding-left: 1vw;
+      height: 6vh;
+      width: 60vw;
+      @media screen and (min-width: $hamburgerbreakpoint){
+        height: 5vh;
+        width: 20vw;
+        &:hover{
+          border: 1px solid $orange;
+        }
+        &:focus{
+          border: 1px solid $orange;
+          outline: $orange auto 5px;
+        }
+      }
+    }
+
+    @media screen and (min-width:$hamburgerbreakpoint){
+      flex-direction: row;
+    }
+
+    .newsletter-signup__button{
+      border: 1px solid $teal;
+      border-radius: $border-radius;
+      background-color: $teal;
+      background-image: url("../img/icons/open-email.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      height: 6vh;
+      width: 12vw;
+
+      margin-left: 1vw;
+
+      @media screen and (min-width: $hamburgerbreakpoint){
+        height: 5vh;
+        width: 5vw;
+        &:hover{
+          background-color: $orange;
+          border: 1px solid $orange;
+          cursor: pointer;
+        }
+        &:focus{
+          background-color: $orange;
+          border: 1px solid $orange;
+          outline: $orange auto 5px;
+        }
+      }
+    }
+  }

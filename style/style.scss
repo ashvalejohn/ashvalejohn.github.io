@@ -1,0 +1,48 @@
+@import 'helpers/_mixins.scss';
+@import 'helpers/_variables.scss';
+
+@import 'components/_carousel.scss';
+@import 'components/_newsletter.scss';
+@import 'components/_footer.scss';
+@import 'components/_footer-nav.scss';
+@import 'components/_form.scss';
+@import 'components/_hamburger-menu.scss';
+@import 'components/_header.scss';
+@import 'components/_page-nav.scss';
+
+@import 'pages/_about-us.scss';
+@import 'pages/_contact-us.scss';
+@import 'pages/_donate.scss';
+@import 'pages/_for-clients.scss';
+@import 'pages/_home.scss';
+@import 'pages/_our-work.scss';
+
+html{
+  width: 100vw;
+}
+body{
+  color: $navy;
+  font-family: $sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  margin:0;
+  width: 100vw;
+}
+
+a{
+  color: inherit;
+  text-decoration: underline;
+}
+
+b{
+  font-weight: bold;
+}
+
+em{
+  font-style: italic;
+}
+
+main{
+  margin: 100px 0 0 0;
+  width: 100vw;
+}

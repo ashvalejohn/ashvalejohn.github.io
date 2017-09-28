@@ -1,0 +1,38 @@
+.carousel{
+  @media screen and (min-width: $hamburgerbreakpoint){
+    padding-top: 5vh;
+  }
+}
+
+.carousel-inner{
+  min-height: 400px;
+  vertical-align: middle;
+}
+
+.carousel-item{
+  @media screen and (min-width: $hamburgerbreakpoint){
+    height: auto;
+    min-height: initial;
+  }
+}
+
+.carousel-flex{
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: $hamburgerbreakpoint){
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+
+.carousel-indicators{
+  z-index: 1;
+  position: relative;
+  li{
+      background-color: $teal;
+    }
+    .active{
+      background-color: $orange;
+    }
+}

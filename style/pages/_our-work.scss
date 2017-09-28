@@ -1,0 +1,300 @@
+/* ======================================
+ OUR WORK | BASE STYLES
+========================================= */
+.our-work{
+  @include center-flex;
+  width: 100%;
+}
+
+.our-work__double-section{
+  @include double-section;
+}
+
+
+/* ----------------------------------------
+OUR WORK | OUR SUCCESSES
+ ---------------------------------------- */
+.our-work__our-successes{
+  margin: 0;
+  padding: 0;
+}
+  .our-successes__title{
+    @include content-box__title;
+  }
+  .our-successes__subtitle{
+    @include content-box__subtitle;
+    padding-bottom: 2vh;
+  }
+
+  .our-successes__carousel-item{
+    img{
+      width: 100vw;
+      @media screen and (min-width: $hamburgerbreakpoint){
+        max-height: 350px;
+        width: auto;
+      }
+    }
+  }
+
+  .our-successes__carousel__testimonial{
+    margin-left: 2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+    margin: 0 1%;
+    text-align: left;
+    @media screen and (min-width: $hamburgerbreakpoint){
+      text-align: center;
+      width: 40%;
+    }
+    .testimonial--pullquote{
+      color: $teal;
+      display: block;
+      font-family: $serif;
+      font-size: 1.25em;
+
+      text-align: center;
+    }
+    .testimonial--name{
+      color: $teal;
+      text-align: right;
+      margin: 0;
+      p{
+        margin: 0;
+      }
+    }
+  }
+
+/* ----------------------------------------
+ OUR WORK | HOW IT WORKS
+ ---------------------------------------- */
+.our-work__how-it-works{
+  @include content-box;
+  @include center-flex;
+  flex: 2;
+}
+  .how-it-works__step{
+    font-family: $serif;
+    line-height: 1.5;
+    margin: 2vh 0;
+    p{
+      margin: 0 0 0 3vw;
+    }
+    span{
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+
+    //Desktop
+    @media screen and (min-width: $hamburgerbreakpoint){
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      p{
+        margin-left: 2vw;
+        width: 50%;
+      }
+      &:first-of-type{
+        justify-content: flex-start;
+      }
+      &:last-of-type{
+        justify-content: flex-end;
+      }
+      &:nth-of-type(2){
+        justify-content: center;
+      }
+    }
+  }
+  .how-it-works__icon{
+    float: left;
+    margin: 1vh 3vw;
+    width: 20%;
+    max-width: 100px;
+    @media screen and (min-width: $hamburgerbreakpoint){
+      float: none;
+    }
+
+  }
+  .how-it-works__title{
+    @include content-box__title;
+  }
+  .how-it-works__subtitle{
+    @include content-box__subtitle;
+  }
+
+
+/* ----------------------------------------
+ OUR WORK | OUR SERVICES
+ ---------------------------------------- */
+.our-work__our-services{
+  flex: 1;
+
+  @include content-box;
+  @include center-flex;
+
+  @media screen and (min-width: $hamburgerbreakpoint){
+    justify-content: flex-start;
+  }
+}
+  .our-services__title{
+    @include content-box__title;
+    font-family: $serif;
+  }
+  .our-services__service{
+    @include center-flex;
+    margin-bottom: 2vh;
+    width: 90%;
+
+      p{
+        font-family: $serif;
+        margin: 0 0 1vh 0;
+        span{
+          color: $orange;
+          display: block;
+          font-family: $sans-serif;
+          text-align: center;
+          padding: .5%;
+        }
+      }
+
+    //Desktop
+    @media screen and (min-width: $hamburgerbreakpoint){
+      display: block;
+    }
+  }
+    .service__title{
+      color: $teal;
+      font-size: 1.25rem;
+      width: 100%;
+      &:first-of-type{
+        margin-top: 2vh;
+      }
+    }
+    .service__button{
+      @include cta-button;
+      font-family: $sans-serif;
+      @media screen and (min-width: $hamburgerbreakpoint){
+        float: right;
+      }
+    }
+
+
+/* ----------------------------------------
+ OUR WORK | WHY IT MATTERS
+ ---------------------------------------- */
+.our-work__why-it-matters{
+  @include content-box;
+  @include center-flex;
+}
+  .why-it-matters__title{
+    @include content-box__title;
+  }
+  .why-it-matters__subtitle{
+    @include content-box__subtitle;
+  }
+  .why-it-matters__by-the-numbers{
+    @include center-flex;
+    width: 100%;
+    @media screen and (min-width: 900px){
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-around;
+    }
+  }
+    .by-the-numbers{
+      background-color: $teal;
+      border-radius: $border-radius;
+      border: 1px solid $teal;
+      box-shadow: $bottom-box-shadow;
+      color: $white;
+      margin: $oneone;
+      padding: $oneone;
+      height: inherit;
+      @media screen and (min-width: $hamburgerbreakpoint){
+        width: 80vw;
+      }
+
+    }
+      .by-the-numbers__title{
+        font-family: $serif;
+        font-size: 1.5rem;
+        font-weight: 400;
+        margin: 3vh 0;
+        text-align: center;
+
+      }
+      .by-the-numbers__numbers{
+        list-style: none;
+        margin: 1%;
+        padding: 0;
+        tbody{
+          border-top: 1px solid $white;
+        }
+        tr{
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: center;
+        }
+        td{
+          height: 10vh;
+          padding-top: 2.5vh;
+          &:first-of-type{
+            border-right: 1px solid $white;
+            font-family: $serif;
+            font-size: 1.5rem;
+            text-align: right;
+            padding-right: 1vw;
+            max-width: 100px;
+            min-width: 100px;
+          }
+          &:last-of-type{
+            padding-left: 1vw;
+            text-align: left;
+          }
+        }
+
+      }
+      .by-the-numbers__subtitle{
+        font-size: .75rem;
+        margin: 5vh 0 0 0;
+        text-align: right;
+      }
+  .why-it-matters__stable-neighborhoods{
+    padding: $oneone;
+    margin: 6vh 1vw;
+      article{
+        display: flex;
+        flex-direction: column;
+        @media screen and (min-width: $hamburgerbreakpoint){
+          flex-direction: row;
+        }
+      }
+      p{
+        flex: 1;
+        font-family: $serif;
+        font-size: 1.1rem;
+        line-height: 1.5;
+        margin: 1vh 1vw;
+        text-align: center;
+        text-indent: $indent;
+        &:not(:last-of-type){
+          border-bottom: 2px solid $halfteal;
+          padding-bottom: 1vh;
+        }
+        @media screen and (min-width: $hamburgerbreakpoint){
+          &:not(:last-of-type){
+            border-bottom: none;
+            padding-bottom: 1vh;
+          }
+        }
+      }
+  }
+    .stable-neighborhoods__title{
+      color: $teal;
+      font-family: $sans-serif;
+      margin: 0 0 5vh 0;
+      text-align: center;
+    }

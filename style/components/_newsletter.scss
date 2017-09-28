@@ -1,0 +1,63 @@
+@mixin newsletter-signup{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  width: inherit;
+}
+
+@mixin newsletter-signup__title{
+  color: $teal;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: .5vh 0;
+}
+
+@mixin newsletter-signup__form{
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+}
+
+@mixin newsletter-signup__input{
+  input[type='text']{
+    border: 1px solid $teal;
+    border-radius: $border-radius;
+    box-shadow: $bottom-box-shadow;
+    font-size: 1.25rem;
+    padding-left: 1vw;
+    height: 6vh;
+    width: 60vw;
+    @media screen and (min-width: $hamburgerbreakpoint){
+      height: 5vh;
+      width: 20vw;
+    }
+  }
+}
+
+@mixin newsletter-signup__button{
+  border: 1px solid $teal;
+  border-radius: $border-radius;
+  background-color: $teal;
+  background-image: url("../img/icons/open-email.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  height: 6vh;
+  width: 12vw;
+
+  margin-left: 1vw;
+
+  @media screen and (min-width: $hamburgerbreakpoint){
+    height: 5vh;
+    width: 5vw;
+  }
+}
+
+@mixin newsletter-signup__subtitle{
+  color: $navy;
+  font-size: .8rem;
+  margin: .5vh 0;
+  font-weight: normal;
+}

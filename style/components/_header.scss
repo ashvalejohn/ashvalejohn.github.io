@@ -1,0 +1,121 @@
+
+.header {
+  background-color: $white;
+  border-bottom: 2px solid $teal;
+  box-shadow: $bottom-box-shadow;
+  color: $navy;
+  height: $headerheight;
+  min-height: 100px;
+  width: 100vw;
+
+  position: fixed;
+  top: 0;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.header--hidden{
+  top: -$headerheight;
+}
+
+.header__hamburger{
+  height: 40%;
+  @media screen and (min-width: 500px){
+    height: 50%;
+  }
+  @media screen and (min-width: $hamburgerbreakpoint){
+    display: none;
+  }
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+.header__nav--desktop{
+  display: none;
+  font-family: $sans-serif;
+
+  @media screen and (min-width: $hamburgerbreakpoint) {
+    display: flex;
+    ul{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      list-style: none;
+      text-align: center;
+
+      margin: 0;
+      padding: 0;
+      li{
+        font-size: 1rem;
+        line-height: 1.5;
+        margin: 1vh 0 1vh 2vw;
+        min-width: 70px;
+        text-transform: uppercase;
+        a{
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.header__nav--selected{
+  border-bottom: 2px solid $white;
+  padding: .5vh 0;
+  @media screen and (min-width: $hamburgerbreakpoint){
+    color: $brown;
+    border-bottom: 2px solid $brown;
+    padding: .5vh 0;
+  }
+
+}
+
+.header__logo__link{
+  max-width: 230px;
+  width: 60%;
+}
+
+.header__logo {
+  width: 100%;
+
+  text-align: center;
+  @media screen and (min-width: $hamburgerbreakpoint){
+    margin: 0 0 1vh 1vw;
+    max-width: 230px;
+    width: 20vw;
+  }
+}
+
+.header__search{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__search-bar{
+  display: none;
+  @media screen and (min-width: $hamburgerbreakpoint) {
+    border: 1px solid $navy;
+    border-radius: 2px;
+    display: block;
+    height: 30%;
+    margin: 0 1vw 0 0;
+    width: 10vw;
+  }
+}
+
+.header__search-icon{
+  max-width: 25px;
+  width: 15%;
+  @media screen and (min-width: $hamburgerbreakpoint) {
+    margin: $oneone;
+  }
+}

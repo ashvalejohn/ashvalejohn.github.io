@@ -1,0 +1,56 @@
+.page__nav{
+  display: none;
+  width: 100%;
+
+  @media screen and (min-width: $hamburgerbreakpoint){
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    padding: $oneone;
+    top: 15vh;
+
+    a{
+      text-decoration: none;
+      &:not(:first-of-type){
+        margin-left: 1vw;
+      }
+    }
+  }
+}
+
+.nav__button{
+  background-color: $ltteal;
+  border: 1px solid $teal;
+  border-radius: $border-radius;
+  box-shadow: $bottom-box-shadow;
+  color: $teal;
+  flex: 1;
+  font-family: $sans-serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 2vh 1vw;
+
+  //Flex button link and arrow
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  &:hover{
+    background-color: $ltorange;
+    border: 1px solid $orange;
+    color: $brown;
+    cursor: pointer;
+    svg{
+      fill: $brown;
+    }
+  }
+  @media screen and (min-width: 500px){
+    height: 10vh;
+    min-height: 70px;
+  }
+  svg{
+    fill: $teal;
+  }
+}
