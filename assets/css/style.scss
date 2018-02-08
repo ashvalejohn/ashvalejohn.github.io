@@ -3,7 +3,13 @@
 
 @import "{{ site.theme }}";
 @import url('https://fonts.googleapis.com/css?family=Bitter');
-@import "_variables";
+
+$red: #fc4b3e;
+$tan: #feeddf;
+
+body{
+  background-color: $tan;
+}
 
 h1{
   color: $red;
