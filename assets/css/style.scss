@@ -1,0 +1,12 @@
+---
+---
+
+@import "{{ site.theme }}";
+@import url('https://fonts.googleapis.com/css?family=Bitter');
+@import "_variables";
+
+h1{
+  color: $red;
+  font-family: 'Bitter', 'serif';
+  font-size: 1.25rem;
+}
