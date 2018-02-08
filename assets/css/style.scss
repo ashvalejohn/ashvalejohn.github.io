@@ -24,7 +24,6 @@ a{
     cursor: pointer;
     font-weight: inherit;
     text-decoration: underline;
-
     }
   }
 
@@ -40,8 +39,10 @@ h1{
 }
 
 h2{
+  border-top: 2px solid $pink;
   color: $pink;
   font-family: 'Bitter', serif;
+  padding-top: 2vh;
 }
 
 h3{
