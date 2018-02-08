@@ -1,4 +1,4 @@
-## Projects
+<!-- ## Projects
 
 ### Tactile
 #### React.js, Redux, Rails, PostgreSQL, Heroku
@@ -19,4 +19,4 @@ PokeLog is a single-page app that allows hemophilia patients to log and review t
 #### JavaScript (ES6), Chrome Extension API
 Shill is a Chrome extension that converts links to interactive product cards.
 
-[Live](/shill)
+[Live](/shill) -->
