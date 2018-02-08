@@ -20,6 +20,9 @@ a{
     &:hover{
       color: $blue;
       cursor: pointer;
+      font-weight: inherit;
+      text-decoration: underline;
+      text-decoration-style: swavy;
     }
   }
 
@@ -27,4 +30,9 @@ h1{
   color: $red;
   font-family: 'Bitter', 'serif';
   font-size: 1.75rem;
+}
+
+h2{
+  color: $pink;
+  font-family: 'Bitter', 'serif';
 }
