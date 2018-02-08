@@ -4,6 +4,7 @@
 @import "{{ site.theme }}";
 @import url('https://fonts.googleapis.com/css?family=Bitter');
 
+$black: #314f62;
 $blue: #206ce4;
 $red: #fc4b3e;
 $pink: #fd8f78;
@@ -11,20 +12,19 @@ $tan: #feeddf;
 
 body{
   background-color: $tan;
-  color: $pink;
+  color: $black;
 }
+
+a{
+    color: inherit;
+    &:hover{
+      color: $blue;
+      cursor: pointer;
+    }
+  }
 
 h1{
   color: $red;
   font-family: 'Bitter', 'serif';
   font-size: 1.75rem;
-}
-
-header{
-  a{
-    color: inherit;
-    &:hover{
-      color: $blue;
-    }
-  }
 }
