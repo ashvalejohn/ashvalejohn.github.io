@@ -51,8 +51,7 @@ h3{
 
 section{
   @media print, screen and (max-width: $break){
-    border-top: 2px solid $red;
-    border-width: 2px;
+    border: none;
   }
 }
 
