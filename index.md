@@ -1,10 +1,10 @@
 ## Projects
 
 ### Tactile
-[See it live](tactile.photos)
+[See it live](http://www.tactile.photos)
 
 ### Poke Log
-[See it live](poke-log.herokuapp.com)
+[See it live](https://poke-log.herokuapp.com)
 
 ### Shill
 
