@@ -1,17 +1,22 @@
 ## Projects
 
-### 🤳 Tactile
+### Tactile
+#### React.js, Redux, Rails, PostgreSQL, Heroku
 Tactile is a shopping app where users can see details about an item by clicking it within an image.
 
-[See it live](http://www.tactile.photos)
+[Live](http://www.tactile.photos)
+[Github](https://www.github.com/ashvalejohn/tactile)
 
 
-### 💉 Poke Log
+### Poke Log
+#### React.js, Redux, Node.js, Express.js, PostgreSQL, Heroku
 PokeLog is a single-page app that allows hemophilia patients to log and review their infusions (called pokes) and joint bleeds.
 
-[See it live](https://poke-log.herokuapp.com)
+[Live](https://poke-log.herokuapp.com)
+[Github](https://www.github.com/ashvalejohn/poke-log)
 
-### 🛍 Shill
+### Shill
+#### JavaScript (ES6), Chrome Extension API
 Shill is a Chrome extension that converts links to interactive product cards.
 
-[See it in action](/shill)
+[Live](/shill)

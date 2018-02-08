@@ -41,11 +41,11 @@ h1{
 
 h2{
   color: $pink;
-  font-family: 'Bitter', 'serif';
+  font-family: 'Bitter', serif;
 }
 
 h3{
-  margin: 0;
+  margin: 0 0 1vh 0;
 }
 
 section{
@@ -57,4 +57,9 @@ section{
 
 footer{
   color: $pink;
+}
+
+.contact-links{
+  color: $pink;
+  font-family: 'Bitter', serif;
 }
