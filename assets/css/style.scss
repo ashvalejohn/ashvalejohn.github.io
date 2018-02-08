@@ -4,6 +4,7 @@
 @import "{{ site.theme }}";
 @import url('https://fonts.googleapis.com/css?family=Bitter|Open+Sans');
 
+$break: 960px;
 $black: #314f62;
 $blue: #206ce4;
 $red: #fc4b3e;
@@ -33,7 +34,7 @@ h1{
   font-size: 2.5rem;
   font-style: italic;
   font-weight: normal;
-  @media screen and (min-width: 600px){
+  @media screen and (min-width: $break){
     font-size: 3rem;
   }
 }
@@ -41,4 +42,15 @@ h1{
 h2{
   color: $pink;
   font-family: 'Bitter', 'serif';
+}
+
+section{
+  @media print, screen and (max-width: $break){
+    border: 2px solid $red;
+    border-width: 2px;
+  }
+}
+
+footer{
+  color: $pink;
 }
