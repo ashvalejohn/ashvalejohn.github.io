@@ -1,0 +1,90 @@
+body{
+  height: 100vh;
+  margin: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  
+  
+  font-family: 'Roboto Mono', monospace;
+  font-size: 18px;
+  @media screen and (min-width: 500px) {
+    align-items: center;
+  }
+}
+
+main{
+  margin: 10% 10% 0 10%;
+
+  @media screen and (min-width: 500px){
+    margin: 0 20%;
+  }
+}
+
+p{
+  line-height: 2.25rem;
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+  &:visited{
+    color: inherit;
+  }
+}
+
+.inline-logo{
+  height: 18px;
+  display: inline-flex;
+  &--linked-in{
+    top: 3px;
+  }
+  &--dspolitical{
+    top: 4px;
+  }
+  img{
+    height: inherit;
+    position: relative;
+    transition: height .2s ease-in-out;
+  }
+  &:hover img, &:focus img{
+    height: 20px;
+    transition: height .2s ease-in-out;
+  }
+}
+
+.inline-emoji{
+  &--hand{
+    animation-name: hand-wave-animation;
+    animation-duration: 2.25s;
+    animation-iteration-count: 1;
+    transform-origin: 70% 70%;
+    display: inline-block;
+    &:hover{
+      transform: rotate(12deg);
+      transition: transform .25s ease-in-out;
+    }
+    transition: transform .25s ease-in-out;
+  }
+  &--email{
+    &:before{
+      content: "📧";
+    }
+    &:hover{
+      &:before{
+        content: "💌";
+      }
+    }
+  }
+}
+
+@keyframes hand-wave-animation {
+    0% { transform: rotate(  0deg) }
+   10% { transform: rotate(-10deg) }
+   20% { transform: rotate( 14deg) }
+   30% { transform: rotate(-10deg) }
+   40% { transform: rotate( 12deg) }
+   50% { transform: rotate( -9deg) }
+   60% { transform: rotate(  9deg) }
+}
